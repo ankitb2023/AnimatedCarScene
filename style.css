@@ -1,0 +1,296 @@
+*
+{
+	margin: 0;
+	padding: 0;
+}
+.round{
+	background: #FFFF00;
+	height: 80px;
+	width: 80px;
+	position: absolute;
+	left: 55%;
+	display: block;
+	border-radius: 50%;
+	animation: ani-three 8s ease-in-out forwards 1,
+	           ani-four 9s ease-in-out 9s forwards 1;
+}
+.carstyle
+{
+	width: 400px;
+	bottom: 75px;
+	left: -400px;
+	position: absolute;
+	z-index: 3;
+}
+.carstyle img{
+	width: 100%;
+	left: -400px;
+	animation: ani-car 5s linear ;
+}
+.wheel2{
+	left: -166px;
+	bottom: 168px;
+	transform: translateX(-50%);
+	position: absolute;
+	z-index: 3;
+}
+.wheel2 img
+{
+	width: 60px;
+	height: 60px;
+	animation: wheel2 5s linear;
+}
+.back2-wheel{
+	left: -164px;
+	position: absolute;
+}
+.front2-wheel{
+	left: 57px;
+	position: absolute;
+}
+.moon{
+	background: white;
+	display: block;
+	height: 80px;
+	width: 80px;
+	position: absolute;
+	left: 55%;
+	display: block;
+	border-radius: 50%;
+	animation: ani-five 8s ease-in-out forwards 1,
+	           ani-six 10s ease-in-out 10s forwards 1;
+}
+.hero{
+	height: 100vh;
+	width: 100%;
+	background-image: url('sky.jpg');
+	background-position: center;
+	background-size: cover;
+	position: relative;
+	overflow-x: hidden;
+	animation: ani-one 4s ease-in-out 1.5s forwards 1,
+	           ani-two 4s ease-in-out 10s forwards 1;
+}
+.highway
+{
+	height: 200px;
+	width: 500%;
+	display: block;
+	background-image: url('road.jpg');
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: 1;
+	background-repeat: repeat-x; 
+	animation: highway 5s linear infinite;
+}
+@keyframes highway
+{
+	100%{
+		transform: translateX(-3400px);
+	}
+}
+.city
+{
+	height: 250px;
+	width: 500%;
+	background-image: url('city.png');
+	position: absolute;
+	bottom: 200px;
+	left: 0;
+	right: 0;
+	display: block;
+	z-index: 1;
+	background-repeat: repeat-x;
+	animation: city 20s linear infinite;
+}
+@keyframes city
+{
+	100%{
+		transform: translateX(-1400px);
+	}
+}
+.car
+{
+	width: 400px;
+	left: 50%;
+	bottom: 100px;
+	transform: translateX(-50%);
+	position: absolute;
+	z-index: 2;
+}
+.car img{
+	width: 100%;
+	animation: car 1s linear infinite;
+}
+@keyframes car{
+	100%{
+		transform: translateY(-1px);
+	}
+	50%{
+		transform: translateY(1px);
+	}
+	0%{
+		transform: translateY(-1px);
+	}
+}
+.wheel{
+	left: 50%;
+	bottom: 178px;
+	transform: translateX(-50%);
+	position: absolute;
+	z-index: 2;
+}
+.wheel img
+{
+	width: 72px;
+	height: 72px;
+	animation: wheel 1s linear infinite;
+}
+.back-wheel{
+	left: -165px;
+	position: absolute;
+}
+.front-wheel{
+	left: 80px;
+	position: absolute;
+}
+@keyframes wheel
+{
+	100%{
+		transform: rotate(360deg);
+	}
+}
+
+@keyframes ani-one{
+	40%{
+		background: url('https://png.pngtree.com/thumb_back/fw800/background/20200103/pngtree-city-building-silhouette-on-orange-sky-background-vector-illustration-sunset-city-image_326119.jpg');
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center;
+		width: 100%;
+	}
+	70%{
+		background: url('data:image/jpeg;base64,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');
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center;
+		width: 100%;
+		z-index: -1;
+	}
+	100%{
+		background: url(https://c4.wallpaperflare.com/wallpaper/734/254/409/sky-purple-atmosphere-galaxy-wallpaper-preview.jpg);
+	background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center;
+		width: 100%;
+		z-index: -1;
+	}
+}
+@keyframes ani-two{
+	10%{
+		background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTIok-xVcM5mkrZyYpr-Z19etbrYoNriDEIUg&usqp=CAU');
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center;
+		width: 100%;
+	}
+	70%{
+		background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSjlC1TYynyKcVEqgA86bHpQhD91t_LAxe2Gg&usqp=CAU');
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center;
+		width: 100%;
+	}
+	100%{
+		background: url('sky.jpg');
+	}
+}
+@keyframes ani-three{
+	0%{
+		top: 0;
+		left: 80%;
+	}
+	70%{
+		background: #ffa07a;
+	}
+	100%{
+		top: 70%;
+		left: 0%;
+	}
+}
+@keyframes ani-four{
+	0%{
+		top: 70%;
+		left: 0%;
+		background: #ffa07a;
+	}
+	70%{
+		background: #FFFF00;
+	}
+	100%{
+		top: 0%;
+		left: 80%;
+	}
+}
+@keyframes ani-five{
+	0%{
+		top: 70%;
+		left: 90%;
+		display: none;
+	}
+	60%{
+		top: 70%;
+		left: 90%;
+	}
+	100%{
+		top: 0%;
+		left: 80%;
+	}
+}
+@keyframes ani-six{
+	0%{
+		top: 0%;
+		left: 80%
+	}
+	70%{
+		top: 70%;
+		left: 90%;
+		opacity: 0.5;
+	}
+	100%{
+		top: 70%;
+		left: 90%;
+	}
+}
+@keyframes ani-car
+{
+	0%{
+		transform: translateX(-300px);
+	}
+	20%{
+		transform: translateX(-50px);
+	}
+	35%{
+		transform: translateX(100px);
+	}
+	100%{
+		transform: translateX(1800px);
+	}
+}
+@keyframes wheel2
+{
+	0%{
+		transform: translateX(-300px);
+	}
+	20%{
+		transform: translateX(-50px);
+	}
+	35%{
+		transform: translateX(100px);
+	}
+	100%{
+		transform: translateX(1800px);
+	}
+}
